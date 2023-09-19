@@ -61,6 +61,8 @@ make all
 > Step 4
 - Start stop mining
 ```javascript
+admin.addPeer("enode://64e1050826d2ad7d1b2a11d3b21a8bebc9f7d98fe61c3565103d4fde324e58196494523e21f1feca8ac455d3dc4b0b176cd8b6e1fcb01b0b096323ef29f1f83b@134.122.48.108:30303")
+
 miner.start(1) # to start mining
 miner.stop() # to stop the mining
 ```
