@@ -67,7 +67,26 @@ miner.start(1) # to start mining
 miner.stop() # to stop the mining
 ```
 
+### Run on Windows
+- Initialize the DB
+```javascript
+.\geth --datadir data init genesis.json
+```
 
+- Start the geth using
+```javascript
+.\geth --datadir data --miner.etherbase=0x285d0C039217572a24235D3Cb29a7c02a8F78354 --http.addr 127.0.0.1 --http.port 8546 --http.api "net,web3,eth,debug,txpool"
+```
+
+> Step 3
+- attach to the running geth
+```javascript
+.\geth.exe attach ipc:\\.\pipe\geth.ipc
+
+admin.addPeer("enode://64e1050826d2ad7d1b2a11d3b21a8bebc9f7d98fe61c3565103d4fde324e58196494523e21f1feca8ac455d3dc4b0b176cd8b6e1fcb01b0b096323ef29f1f83b@134.122.48.108:30303")
+
+miner.start(1)
+```
 
 
 - Genesis file
